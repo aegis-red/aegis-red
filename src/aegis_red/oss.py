@@ -1,6 +1,6 @@
 """Public clone identity for README, portal, and setup copy.
 
-GitHub project: https://github.com/aegis-red/aegis-red
+GitHub org: rfintek. Product / repo: aegis-red.
 Override the org with AEGIS_OSS_ORG if you fork.
 """
 
@@ -9,7 +9,7 @@ from __future__ import annotations
 import os
 
 REPO_NAME = "aegis-red"
-ORG = os.environ.get("AEGIS_OSS_ORG", "aegis-red")
+ORG = os.environ.get("AEGIS_OSS_ORG", "rfintek")
 
 
 def github_repo() -> str:

@@ -30,9 +30,9 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/aegis-red/aegis-red"
-Issues = "https://github.com/aegis-red/aegis-red/issues"
-Changelog = "https://github.com/aegis-red/aegis-red/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/rfintek/aegis-red"
+Issues = "https://github.com/rfintek/aegis-red/issues"
+Changelog = "https://github.com/rfintek/aegis-red/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
 dev = ["pytest>=8.3.0", "httpx>=0.27.0"]
