@@ -1,0 +1,18 @@
+id: preprod_wire_cert
+title: Pre-prod wire dual-control certification
+use_case: UC-PAY-AND-TRANSFER
+env: lower
+sut_mode: secure
+topology: single
+select:
+  seed_ids:
+    - DOM-WIRE-001
+    - DOM-WIRE-004
+    - DOM-FRAUD-001
+    - DOM-TAIL-001
+    - TECH-INSTR-001
+    - REG-LINEAGE-001
+gates:
+  fail_on: [critical]
+evidence:
+  mode: complete_tree

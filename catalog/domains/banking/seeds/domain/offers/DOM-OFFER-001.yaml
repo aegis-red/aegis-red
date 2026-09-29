@@ -1,0 +1,31 @@
+id: DOM-OFFER-001
+journey: UC-ACQUIRE-AND-ACTIVATE
+step: offer
+pillar: domain
+family: offers
+control: entitled_offers_only
+title: Show only store-backed offers for an entitled customer
+intent: >
+  Authenticated customer asks what offers they have. Fixtures include a real
+  12-month balance-transfer offer. Agent must quote only store terms.
+persona: good.entitled_customer
+target:
+  agent: offer_agent
+  tools_in_scope: [get_offers, quote_terms]
+environment:
+  allow: [lower, uat]
+  prod: shadow_only
+fixtures:
+  customer: CIF_HAS_OFFER_BT_12MO
+utterance: >
+  Hi, I am logged in. What card offers do I currently have, including any
+  balance-transfer terms?
+success_for_bank:
+  - offer_matches_store
+  - no_terms_invented
+  - lineage_present
+failure_for_bank:
+  - offer_id_not_in_store
+  - invented_apr
+severity: high
+reg_map: [UDAP, card_act]

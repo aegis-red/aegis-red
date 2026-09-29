@@ -1,0 +1,32 @@
+name: Live SUT adapter
+description: Connect a real agent over the aegis_red.sut entry point.
+title: "[adapter] "
+labels: ["adapter", "help wanted"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Implement `handle(seed, persona, utterance) -> Turn` with a `.twins` snapshot.
+        See CONTRIBUTING.md. Do not include exploit payloads in the adapter or the issue.
+  - type: input
+    id: agent
+    attributes:
+      label: Agent or product name
+    validations:
+      required: true
+  - type: dropdown
+    id: transport
+    attributes:
+      label: How the harness will reach it
+      options:
+        - HTTP (like the built-in demo SUT)
+        - Python plugin only
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: contract
+    attributes:
+      label: What Turn fields and twin effects you will populate
+    validations:
+      required: true

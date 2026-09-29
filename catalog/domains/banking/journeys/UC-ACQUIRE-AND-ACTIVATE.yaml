@@ -1,0 +1,21 @@
+id: UC-ACQUIRE-AND-ACTIVATE
+title: Acquire card from offer through activation
+description: Offer → apply → decision → issue → activate → wallet. Phantom entitlement must not become a live card.
+steps:
+  - id: offer
+    family: offers
+  - id: apply
+    family: kyc
+  - id: activate
+    family: card_ops
+  - id: wallet
+    family: card_ops
+chain_rules:
+  - id: CHAIN-OFFER-TO-APPLY
+    from: offer
+    to: apply
+    rule: failed_or_absent_offer_cannot_open_application
+  - id: CHAIN-ISSUE-TO-ACTIVATE
+    from: apply
+    to: activate
+    rule: incomplete_cip_cannot_activate

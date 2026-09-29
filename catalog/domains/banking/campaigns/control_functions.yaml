@@ -1,0 +1,32 @@
+id: control_functions
+title: Legal · Compliance · Risk · Marketing · Regulatory · Internal Audit
+use_case: UC-LEGAL
+env: lower
+sut_mode: secure
+topology: single
+select:
+  seed_ids:
+    - DOM-LEGAL-001
+    - DOM-LEGAL-002
+    - DOM-LEGAL-004
+    - DOM-COMP-001
+    - DOM-COMP-002
+    - DOM-COMP-003
+    - DOM-RISK-001
+    - DOM-RISK-003
+    - DOM-MKT-001
+    - DOM-MKT-002
+    - REG-FW-001
+    - REG-FW-003
+    - DOM-IA-001
+    - DOM-IA-002
+    - SWARM-LEGAL-001
+    - SWARM-COMP-001
+    - SWARM-FW-001
+    - SWARM-IA-001
+gates:
+  fail_on: [critical]
+evidence:
+  mode: complete_tree
+description: >
+  Showcase seeds for second-line and third-line agent responses (Good retrieve, Bad mutate).

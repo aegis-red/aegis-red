@@ -1,0 +1,12 @@
+id: UC-RISK
+title: Risk appetite, KRIs, and model risk
+description: Appetite, residual-risk language, and model ratings come from the risk engine only.
+steps:
+  - id: appetite
+    family: risk
+  - id: kri
+    family: risk
+  - id: model
+    family: risk
+  - id: incident
+    family: risk

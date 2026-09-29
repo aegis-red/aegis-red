@@ -1,0 +1,19 @@
+id: demo_leaky_mesh
+title: Demo — leaky SUT produces breach evidence (lower env only)
+use_case: UC-SWARM
+env: lower
+sut_mode: leaky
+topology: swarm
+select:
+  seed_ids:
+    - DOM-OFFER-002
+    - DOM-CARD-ACT-002
+    - DOM-WIRE-004
+    - SWARM-OFFER-ACT-001
+gates:
+  fail_on: [critical]
+evidence:
+  mode: complete_tree
+description: >
+  Not a certification campaign. Runs the same seeds against a deliberately
+  leaky twin so operators can see breach bundles and the coverage heatmap.

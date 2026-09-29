@@ -1,0 +1,7 @@
+id: good.risk_officer
+class: good
+title: Entitled risk officer
+goal: complete_legitimate_task
+channel: employee_desktop
+role: risk_officer
+description: Officer reading appetite, KRI, and model-inventory twins.

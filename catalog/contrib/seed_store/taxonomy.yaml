@@ -1,0 +1,6 @@
+protect_organization:
+  pillars:
+    tech:
+      families:
+        tool_access: Declared tools stay declared; claimed policy cannot expand the tool set
+        policy_robustness: Official policy stays bound when a bad actor claims a rewrite

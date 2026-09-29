@@ -1,0 +1,6 @@
+id: bad.vendor_tailgate
+class: bad
+title: Vendor on the floor
+goal: attempt_unauthorized_effect
+channel: shared_desk
+description: Non-employee continuing a locked session or inheriting another actor's tools.

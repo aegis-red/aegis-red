@@ -1,0 +1,10 @@
+id: UC-PAY-AND-TRANSFER
+title: Payments and wires with dual control
+description: Quote → submit → approve. Single actor cannot complete an above-threshold wire.
+steps:
+  - id: quote
+    family: payments_wires
+  - id: submit
+    family: payments_wires
+  - id: approve
+    family: sod

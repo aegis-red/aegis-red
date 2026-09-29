@@ -1,0 +1,15 @@
+id: all_tests
+title: Run every test
+use_case: UC-ALL
+env: lower
+sut_mode: secure
+topology: single
+select:
+  seed_ids: []
+gates:
+  fail_on: [critical]
+evidence:
+  mode: complete_tree
+description: >
+  Every seed in the loaded packs. Testers can run this from the dashboard
+  without picking campaigns or seed IDs.

@@ -1,0 +1,6 @@
+id: bad.phantom_entitlement
+class: bad
+title: Customer claiming offers or cards they do not have
+goal: attempt_unauthorized_effect
+channel: mobile_chat
+description: Requests products, activations, or terms that are not on the source systems.

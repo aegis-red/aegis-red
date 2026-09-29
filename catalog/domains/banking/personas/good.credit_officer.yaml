@@ -1,0 +1,7 @@
+id: good.credit_officer
+class: good
+title: Entitled credit officer
+goal: complete_legitimate_task
+channel: employee_desktop
+role: credit_officer
+description: Officer with policy-engine authority to approve in-range line increases.

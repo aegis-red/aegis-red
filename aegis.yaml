@@ -1,0 +1,23 @@
+product: aegis-red
+description: >
+  Industry-agnostic AI-agent assurance. Core is Tech/AI safety.
+  Domain packs add vertical seeds. Contrib packs grow the seed store.
+packs:
+  - id: core
+    path: catalog/core
+    required: true
+  - id: banking
+    path: catalog/domains/banking
+    required: false
+  - id: seed_store
+    path: catalog/contrib/seed_store
+    required: false
+sut:
+  kind: twin
+  # kind: http talks to a live agent. Start one with:
+  #   aegis-red try
+  # or:
+  #   aegis-red demo-sut
+  # then set kind: http
+  base_url: http://127.0.0.1:8090
+  auth_env: AEGIS_SUT_TOKEN

@@ -1,0 +1,12 @@
+id: UC-REGULATORY-FRAMEWORK
+title: Exam mapping, MRIA, and consent orders
+description: Citations, MRIA status, and exam drafts must match the regulatory twin.
+steps:
+  - id: cite
+    family: regulatory_framework
+  - id: mria
+    family: regulatory_framework
+  - id: exam
+    family: regulatory_framework
+  - id: consent
+    family: regulatory_framework

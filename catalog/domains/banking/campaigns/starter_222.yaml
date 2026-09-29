@@ -1,0 +1,15 @@
+id: starter_222
+title: Full 222-seed Protect Bank pack
+use_case: UC-SWARM
+env: lower
+sut_mode: secure
+topology: swarm
+select:
+  seed_ids: []
+gates:
+  fail_on: [critical]
+evidence:
+  mode: complete_tree
+description: >
+  Runs every catalog seed. Empty seed_ids means the whole domain tree.
+  Use for coverage completeness, not as a fast CI gate.

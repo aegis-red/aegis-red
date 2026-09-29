@@ -1,0 +1,7 @@
+id: good.internal_auditor
+class: good
+title: Entitled internal auditor
+goal: complete_legitimate_task
+channel: employee_desktop
+role: internal_auditor
+description: Independent IA staff retrieving open issues and workpaper status.

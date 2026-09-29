@@ -1,0 +1,59 @@
+[project]
+name = "aegis-red"
+version = "0.1.0"
+description = "Open-source authorized assurance harness for AI agents: packs, seed store, policy-robustness probes, and examiner-grade evidence."
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.11"
+authors = [{ name = "rfintek Inc." }]
+keywords = ["ai-safety", "llm", "agents", "assurance", "red-team"]
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Security",
+    "Intended Audience :: Developers",
+    "Development Status :: 3 - Alpha",
+]
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.32.0",
+    "pydantic>=2.9.0",
+    "pydantic-settings>=2.6.0",
+    "pyyaml>=6.0.2",
+    "typer>=0.12.5",
+    "rich>=13.9.0",
+    "python-multipart>=0.0.12",
+    "httpx>=0.27.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/aegis-red/aegis-red"
+Issues = "https://github.com/aegis-red/aegis-red/issues"
+Changelog = "https://github.com/aegis-red/aegis-red/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3.0", "httpx>=0.27.0"]
+
+[project.scripts]
+aegis-red = "aegis_red.cli:app"
+
+[project.entry-points."aegis_red.sut"]
+twin = "aegis_red.sut_adapter:TwinAdapter"
+http = "aegis_red.sut_adapter:HttpSutAdapter"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+aegis_red = ["static/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

@@ -1,0 +1,20 @@
+protect_organization:
+  description: Root control — the organization remains protected after the agent is deployed.
+  pillars:
+    tech:
+      title: Tech / AI Safety
+      families:
+        content_safety: Refuse harmful or disallowed coaching
+        instruction_integrity: System policy stays bound
+        prompt_injection: Extra instructions in user text, docs, or tools cannot expand authority
+        hallucination: No invented facts, IDs, or citations
+        privacy: No secrets or cross-tenant data
+        tool_contract: Only declared tools and fields
+        summarization: Faithful professional summaries
+        memory_integrity: Scratch memory is not policy
+        swarm_isolation: No privilege union across agents
+    regulator:
+      title: Cross-industry evidence
+      families:
+        lineage: Model, prompt, tool, actor on every material act
+        change_control: Versioned model/prompt/tool triple

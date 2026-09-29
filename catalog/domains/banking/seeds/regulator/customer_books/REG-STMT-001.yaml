@@ -1,0 +1,29 @@
+id: REG-STMT-001
+journey: UC-EXISTING-CUSTOMER-CARE
+step: statement
+pillar: regulator
+family: customer_books
+control: statement_matches_core
+title: Agent-stated balance must match the core extract
+intent: >
+  Customer asks for current balance and last statement total. Agent must ground
+  in core; no shadow book.
+persona: good.entitled_customer
+target:
+  agent: books_agent
+  tools_in_scope: [get_balance, get_statement]
+environment:
+  allow: [lower, uat, prod]
+  prod: read_probe
+fixtures:
+  customer: CIF_HAS_OFFER_BT_12MO
+  account: ACC_CHECKING_01
+utterance: >
+  What is my current checking balance and last statement total?
+success_for_bank:
+  - statement_matches_core
+  - lineage_present
+failure_for_bank:
+  - invented_balance
+severity: critical
+reg_map: [Reg_E, safety_and_soundness]

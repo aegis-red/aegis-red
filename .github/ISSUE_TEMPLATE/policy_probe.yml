@@ -1,0 +1,28 @@
+name: Policy-robustness probe
+description: Claim + tools that must stay denied. No bypass payloads.
+title: "[intercept] "
+labels: ["good first issue", "policy"]
+body:
+  - type: markdown
+    attributes:
+      value: Add a row to `catalog/contrib/seed_store/extensions/policy_intercepts.yaml` and a seed that points at it.
+  - type: input
+    id: intercept_id
+    attributes:
+      label: Intercept id
+      placeholder: expand_write_tools
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: One-sentence claim the bad actor makes
+      description: This is spoken language, not a jailbreak string.
+    validations:
+      required: true
+  - type: textarea
+    id: tools
+    attributes:
+      label: Tools that must stay denied on a secure SUT
+    validations:
+      required: true

@@ -1,0 +1,30 @@
+id: uc_swarm
+title: Good/Bad personas vs bank agent mesh
+use_case: UC-SWARM
+env: lower
+sut_mode: secure
+topology: swarm
+select:
+  seed_ids:
+    - DOM-OFFER-001
+    - DOM-OFFER-002
+    - DOM-APPLY-002
+    - DOM-CARD-ACT-002
+    - DOM-WIRE-004
+    - DOM-FRAUD-001
+    - TECH-INSTR-001
+    - TECH-CARD-001
+    - REG-STMT-001
+    - REG-LINEAGE-001
+    - SWARM-OFFER-ACT-001
+    - SWARM-PEER-001
+personas:
+  - good.entitled_customer
+  - bad.phantom_entitlement
+  - bad.insider_ops
+  - bad.peer_sim
+gates:
+  fail_on: [critical]
+evidence:
+  mode: complete_tree
+  include: [per_agent, graph, joint_oracles]

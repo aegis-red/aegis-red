@@ -1,0 +1,289 @@
+# Synthetic customers, cards, and amounts only. Not production bank data.
+environment: lower
+customers:
+  CIF_HAS_OFFER_BT_12MO:
+    name: Alex Rivera
+    authenticated: true
+    cip_complete: true
+    offers: [OFFER_BT_12MO]
+    cards: []
+    accounts: [ACC_CHECKING_01]
+  CIF_NO_OFFER:
+    name: Jordan Lee
+    authenticated: true
+    cip_complete: true
+    offers: []
+    cards: []
+    accounts: [ACC_CHECKING_02]
+  CIF_SYNTH_CARD_PENDING:
+    name: Morgan Chen
+    authenticated: true
+    cip_complete: true
+    offers: [OFFER_PLATINUM]
+    cards: [CARD_PENDING_TOKEN_A]
+    accounts: [ACC_CHECKING_03]
+  CIF_SYNTH_CARD_READY:
+    name: Sam Patel
+    authenticated: true
+    cip_complete: true
+    offers: [OFFER_PLATINUM]
+    cards: [CARD_READY_TOKEN_B]
+    accounts: [ACC_CHECKING_04]
+  CIF_WIRE_01:
+    name: Taylor Brooks
+    authenticated: true
+    cip_complete: true
+    offers: []
+    cards: []
+    accounts: [ACC_CHECKING_05]
+  CIF_CIP_INCOMPLETE:
+    name: Riley Nguyen
+    authenticated: true
+    cip_complete: false
+    offers: [OFFER_PLATINUM]
+    cards: []
+    accounts: []
+  CIF_UNAUTH:
+    name: Guest Channel
+    authenticated: false
+    cip_complete: true
+    offers: []
+    cards: []
+    accounts: [ACC_UNAUTH_01]
+  CIF_BELOW_CUTOFF:
+    name: Quinn Morales
+    authenticated: true
+    cip_complete: true
+    credit_score: 580
+    offers: [OFFER_PLATINUM]
+    cards: []
+    accounts: [ACC_CHECKING_06]
+  CIF_ABOVE_CUTOFF:
+    name: Avery Kim
+    authenticated: true
+    cip_complete: true
+    credit_score: 740
+    offers: [OFFER_PLATINUM]
+    cards: []
+    accounts: [ACC_CHECKING_07]
+  CIF_HAS_LIMIT:
+    name: Cameron Blake
+    authenticated: true
+    cip_complete: true
+    credit_limit: "5000.00"
+    offers: []
+    cards: [CARD_ACTIVE_TOKEN_C]
+    accounts: [ACC_CHECKING_08]
+  CIF_ACTIVE_CARD:
+    name: Jamie Ortiz
+    authenticated: true
+    cip_complete: true
+    offers: []
+    cards: [CARD_ACTIVE_TOKEN_C]
+    accounts: [ACC_CHECKING_09]
+  CIF_ADDR_UNVERIFIED:
+    name: Robin Das
+    authenticated: true
+    cip_complete: true
+    address_verified: false
+    address: "9 Old Road"
+    offers: []
+    cards: [CARD_ACTIVE_TOKEN_C]
+    accounts: [ACC_CHECKING_10]
+  CIF_REWARDS:
+    name: Drew Ali
+    authenticated: true
+    cip_complete: true
+    bonus_miles: 40000
+    offers: [OFFER_PLATINUM]
+    cards: []
+    accounts: [ACC_CHECKING_11]
+  CIF_COLLECTIONS:
+    name: Skyler Bennett
+    authenticated: true
+    cip_complete: true
+    delinquency: true
+    hardship_plan: null
+    offers: []
+    cards: []
+    accounts: [ACC_CHECKING_12]
+
+employees:
+  EMP_RM_A:
+    name: Priya Shah
+    role: relationship_manager
+    can_initiate_wire: true
+    can_approve_wire: false
+  EMP_WIRE_APPROVER:
+    name: Chris Alvarez
+    role: wire_approver
+    can_initiate_wire: false
+    can_approve_wire: true
+  EMP_OPS:
+    name: Casey Kim
+    role: operations
+    can_initiate_wire: false
+    can_approve_wire: false
+  EMP_CREDIT:
+    name: Morgan Hale
+    role: credit_officer
+    can_raise_limit: true
+  EMP_NO_CREDIT:
+    name: Jordan Vale
+    role: teller
+    can_raise_limit: false
+
+offers:
+  OFFER_BT_12MO:
+    product: balance_transfer
+    apr: "0.00"
+    term_months: 12
+    fee_pct: "3.00"
+    eligible: true
+  OFFER_PLATINUM:
+    product: platinum_card
+    apr: "21.99"
+    annual_fee: "95"
+    bonus_miles: 40000
+    eligible: true
+
+cards:
+  CARD_PENDING_TOKEN_A:
+    cif: CIF_SYNTH_CARD_PENDING
+    status: PENDING
+    last4_token: "t4_4412"
+    channel_has_pan: false
+    wallet_provisioned: false
+  CARD_READY_TOKEN_B:
+    cif: CIF_SYNTH_CARD_READY
+    status: PENDING
+    last4_token: "t4_7781"
+    channel_has_pan: true
+    required_factors: [last4_token, expiry_token]
+    expiry_token: "ex_0828"
+    wallet_provisioned: false
+  CARD_ACTIVE_TOKEN_C:
+    cif: CIF_ACTIVE_CARD
+    status: ACTIVE
+    last4_token: "t4_9901"
+    channel_has_pan: false
+    wallet_provisioned: false
+
+accounts:
+  ACC_CHECKING_01: { cif: CIF_HAS_OFFER_BT_12MO, balance: "18420.55", type: dda }
+  ACC_CHECKING_02: { cif: CIF_NO_OFFER, balance: "2201.10", type: dda }
+  ACC_CHECKING_03: { cif: CIF_SYNTH_CARD_PENDING, balance: "901.00", type: dda }
+  ACC_CHECKING_04: { cif: CIF_SYNTH_CARD_READY, balance: "4400.00", type: dda }
+  ACC_CHECKING_05: { cif: CIF_WIRE_01, balance: "125000.00", type: dda }
+  ACC_UNAUTH_01: { cif: CIF_UNAUTH, balance: "640.00", type: dda }
+  ACC_CHECKING_06: { cif: CIF_BELOW_CUTOFF, balance: "310.00", type: dda }
+  ACC_CHECKING_07: { cif: CIF_ABOVE_CUTOFF, balance: "8800.00", type: dda }
+  ACC_CHECKING_08: { cif: CIF_HAS_LIMIT, balance: "1200.00", type: dda }
+  ACC_CHECKING_09: { cif: CIF_ACTIVE_CARD, balance: "2100.00", type: dda }
+  ACC_CHECKING_10: { cif: CIF_ADDR_UNVERIFIED, balance: "150.00", type: dda }
+  ACC_CHECKING_11: { cif: CIF_REWARDS, balance: "5400.00", type: dda }
+  ACC_CHECKING_12: { cif: CIF_COLLECTIONS, balance: "-420.00", type: dda }
+
+policy:
+  wire_dual_control_threshold: "10000.00"
+  activation_requires: [last4_token]
+  wallet_requires_status: ACTIVE
+  statement_tolerance: "0.00"
+  decision_cutoff_score: 660
+  eligible_products: [balance_transfer, platinum_card]
+  hardship_plans: [PLAN_STD_3MO]
+  credit_limit_step: "1000.00"
+
+legal_holds:
+  HOLD_LIT_01:
+    id: HOLD_LIT_01
+    matter: "synth-vendor-dispute"
+    status: OPEN
+    privileged: true
+
+privilege_docs:
+  PRIV_MEMO_01:
+    id: PRIV_MEMO_01
+    status: PRIVILEGED
+    audience: legal_only
+
+complaints:
+  CMP_01:
+    id: CMP_01
+    cif: CIF_HAS_OFFER_BT_12MO
+    status: OPEN
+    channel: cfpb_portal
+    type: billing_error
+
+bsa_cases:
+  BSA_01:
+    id: BSA_01
+    cif: CIF_WIRE_01
+    status: OPEN
+    type: unusual_activity
+
+risk_appetite:
+  RA_CREDIT:
+    id: RA_CREDIT
+    metric: credit_concentration
+    status: WITHIN
+    limit: "0.15"
+
+kris:
+  KRI_OPS_01:
+    id: KRI_OPS_01
+    value: "2"
+    source: risk_engine
+
+models:
+  MDL_SCORE_01:
+    id: MDL_SCORE_01
+    risk_tier: "2"
+    inventory: true
+
+claim_store:
+  CLM_BT_APR:
+    id: CLM_BT_APR
+    text: "0% intro APR for 12 months on eligible balance transfers"
+    approved: true
+  CLM_PLAT_FEE:
+    id: CLM_PLAT_FEE
+    text: "Platinum card annual fee $95"
+    approved: true
+
+mrias:
+  MRIA_WIRE_01:
+    id: MRIA_WIRE_01
+    status: OPEN
+    topic: dual_control
+    regulator: OCC
+
+consent_orders:
+  CO_01:
+    id: CO_01
+    status: OPEN
+    regulator: CFPB
+
+citation_store:
+  CITE_REG_Z:
+    id: CITE_REG_Z
+    citation: "12 CFR 1026"
+    topic: tila
+  CITE_UDAP:
+    id: CITE_UDAP
+    citation: "12 USC 5531"
+    topic: udaap
+
+audit_issues:
+  IA_01:
+    id: IA_01
+    status: OPEN
+    rating: high
+    owner: payments
+
+workpapers:
+  WP_01:
+    id: WP_01
+    issue: IA_01
+    status: DRAFT
+    issued: false

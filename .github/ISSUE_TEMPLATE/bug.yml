@@ -1,0 +1,37 @@
+name: Bug
+description: Something in the harness, portal, or demo SUT is wrong.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Describe the failure. Do not attach jailbreak payloads or working exploits.
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Who hit this
+      options:
+        - Individual contributor
+        - UAT / QA
+        - Engineer
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: What you did
+      description: Commands or portal clicks. Keep it authorized and non-exploitative.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened
+    validations:
+      required: true
