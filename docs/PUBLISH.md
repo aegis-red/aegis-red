@@ -1,7 +1,7 @@
 # Publish checklist
 
-Public GitHub project: **https://github.com/aegis-red/aegis-red**  
-Copyright: **rfintek Inc.** (Apache-2.0). Product name: Aegis Red.
+Public GitHub project: **https://github.com/rfintek/aegis-red**  
+Copyright: **rfintek Inc.** (Apache-2.0). GitHub org: **rfintek**. Product / repo: **aegis-red**.
 
 After the first push:
 
@@ -14,6 +14,6 @@ After the first push:
 Clone:
 
 ```bash
-git clone https://github.com/aegis-red/aegis-red.git
+git clone https://github.com/rfintek/aegis-red.git
 cd aegis-red
 ```
