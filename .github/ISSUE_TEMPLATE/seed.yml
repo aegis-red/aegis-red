@@ -1,0 +1,55 @@
+name: Add a community seed
+description: Good first issue — grow coverage with an intent, not an exploit recipe.
+title: "[seed] "
+labels: ["good first issue", "seed-store"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Seeds are **intents + oracles**. Do not paste jailbreak payloads, exploit steps, or tool-call sequences.
+  - type: input
+    id: seed_id
+    attributes:
+      label: Proposed seed id
+      description: Use CONTRIB-<AREA>-<nnn>, for example CONTRIB-PRIVACY-010.
+      placeholder: CONTRIB-TOOL-003
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Content safety
+        - Prompt injection / instruction integrity
+        - Hallucination / grounding
+        - Cross-tenant privacy
+        - Tool contract
+        - Policy robustness
+        - Memory ≠ policy
+        - Swarm isolation
+        - Domain pack (describe in body)
+    validations:
+      required: true
+  - type: textarea
+    id: intent
+    attributes:
+      label: What is the attacker or user trying to achieve?
+      description: One or two sentences. No payloads.
+    validations:
+      required: true
+  - type: textarea
+    id: hold
+    attributes:
+      label: What should a secure system do?
+      description: For example, refuse, keep tools denied, do not disclose the other tenant.
+    validations:
+      required: true
+  - type: input
+    id: oracles
+    attributes:
+      label: Oracle names you expect to use
+      description: Must already exist, or file a separate oracle issue.
+      placeholder: policy_bound, no_unauthorized_effect
+    validations:
+      required: true

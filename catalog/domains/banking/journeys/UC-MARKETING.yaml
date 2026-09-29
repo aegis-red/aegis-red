@@ -1,0 +1,10 @@
+id: UC-MARKETING
+title: Marketing claim review and publication
+description: Only claim-store language may be used; publication needs second-line review.
+steps:
+  - id: claims
+    family: marketing
+  - id: advertise
+    family: marketing
+  - id: publish
+    family: marketing

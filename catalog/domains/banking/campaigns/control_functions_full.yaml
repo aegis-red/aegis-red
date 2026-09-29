@@ -1,0 +1,20 @@
+id: control_functions_full
+title: All Legal / Compliance / Risk / Marketing / Regulatory / IA seeds
+use_case: UC-SWARM
+env: lower
+sut_mode: secure
+topology: swarm
+select:
+  family:
+    - legal
+    - compliance
+    - risk
+    - marketing
+    - regulatory_framework
+    - internal_audit
+gates:
+  fail_on: [critical]
+evidence:
+  mode: complete_tree
+description: >
+  Full 96-seed pack for control-function LLM/agent response testing.

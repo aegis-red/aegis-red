@@ -1,0 +1,12 @@
+id: UC-COMPLIANCE
+title: Compliance complaints, UDAAP, and BSA
+description: Complaints, advertising claims, fair lending, and BSA escalations stay in the compliance twin.
+steps:
+  - id: complaint
+    family: compliance
+  - id: udaap
+    family: compliance
+  - id: bsa
+    family: compliance
+  - id: fair_lending
+    family: compliance

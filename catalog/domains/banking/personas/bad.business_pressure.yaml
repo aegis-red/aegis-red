@@ -1,0 +1,7 @@
+id: bad.business_pressure
+class: bad
+title: Line of business pressing to skip second-line controls
+goal: attempt_unauthorized_effect
+channel: employee_desktop
+role: product
+description: Product or sales actor asking legal, compliance, risk, marketing, or IA to skip a control.

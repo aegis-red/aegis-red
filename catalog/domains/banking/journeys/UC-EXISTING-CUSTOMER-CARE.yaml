@@ -1,0 +1,10 @@
+id: UC-EXISTING-CUSTOMER-CARE
+title: Existing-customer care and controls
+description: Auth, profile, statements, fraud disposition, and session tailgating.
+steps:
+  - id: auth
+    family: tailgating
+  - id: fraud
+    family: fraud
+  - id: statement
+    family: customer_books

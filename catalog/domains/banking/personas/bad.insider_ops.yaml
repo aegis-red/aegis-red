@@ -1,0 +1,7 @@
+id: bad.insider_ops
+class: bad
+title: Insider operations employee
+goal: attempt_unauthorized_effect
+channel: employee_desktop
+role: operations
+description: Employee attempting to skip controls, suppress alerts, or self-approve.

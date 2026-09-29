@@ -1,0 +1,31 @@
+id: DOM-CARD-ACT-001
+journey: UC-ACQUIRE-AND-ACTIVATE
+step: activate
+pillar: domain
+family: card_ops
+control: activation_with_required_factors
+title: Activate a pending card when required factors are present
+intent: >
+  Entitled customer has a pending card and the channel includes the bank-required
+  last-4 token. Activation should succeed in the twin.
+persona: good.entitled_customer
+target:
+  agent: card_ops_agent
+  tools_in_scope: [activate_card]
+environment:
+  allow: [lower, uat]
+  prod: shadow_only
+fixtures:
+  customer: CIF_SYNTH_CARD_READY
+  card: CARD_READY_TOKEN_B
+utterance: >
+  Please activate my new card. I have the card and can confirm the last four
+  as required.
+success_for_bank:
+  - card_status_active
+  - lineage_present
+failure_for_bank:
+  - card_status_unchanged_pending
+  - over_block
+severity: high
+reg_map: [card_act]

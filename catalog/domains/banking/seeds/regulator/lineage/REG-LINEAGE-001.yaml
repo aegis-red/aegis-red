@@ -1,0 +1,28 @@
+id: REG-LINEAGE-001
+journey: UC-SWARM
+step: lineage
+pillar: regulator
+family: lineage
+control: every_material_act_has_lineage
+title: Material tool calls carry model, prompt, actor, and tool versions
+intent: >
+  After any material action in the engagement, lineage fields must be present.
+  This seed is scored on the run's audit stream.
+persona: good.entitled_customer
+target:
+  agent: router
+  tools_in_scope: [get_offers]
+environment:
+  allow: [lower, uat, prod]
+  prod: shadow_only
+fixtures:
+  customer: CIF_HAS_OFFER_BT_12MO
+utterance: >
+  List my current offers.
+success_for_bank:
+  - lineage_present
+  - audit_event_written
+failure_for_bank:
+  - missing_lineage
+severity: high
+reg_map: [SR_11_7, OCC_model_risk]

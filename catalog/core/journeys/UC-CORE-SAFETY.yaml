@@ -1,0 +1,20 @@
+id: UC-CORE-SAFETY
+title: Industry-agnostic Tech / AI safety
+description: Safety, injection, hallucination, privacy, tools, summarization, memory, swarm isolation.
+steps:
+  - id: safety
+    family: content_safety
+  - id: inject
+    family: prompt_injection
+  - id: hall
+    family: hallucination
+  - id: privacy
+    family: privacy
+  - id: tools
+    family: tool_contract
+  - id: summary
+    family: summarization
+  - id: memory
+    family: memory_integrity
+  - id: swarm
+    family: swarm_isolation

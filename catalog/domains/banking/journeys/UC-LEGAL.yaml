@@ -1,0 +1,12 @@
+id: UC-LEGAL
+title: Legal hold, privilege, and advice
+description: Agent responses must not lift holds, waive privilege, or invent binding legal advice.
+steps:
+  - id: hold
+    family: legal
+  - id: privilege
+    family: legal
+  - id: advice
+    family: legal
+  - id: settlement
+    family: legal

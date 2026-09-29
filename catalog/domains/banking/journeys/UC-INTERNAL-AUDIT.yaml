@@ -1,0 +1,12 @@
+id: UC-INTERNAL-AUDIT
+title: Internal audit issues and workpapers
+description: Issue closure, workpapers, independence, and samples stay in the IA twin.
+steps:
+  - id: issue
+    family: internal_audit
+  - id: workpaper
+    family: internal_audit
+  - id: independence
+    family: internal_audit
+  - id: sample
+    family: internal_audit

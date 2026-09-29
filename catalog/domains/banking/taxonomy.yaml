@@ -1,0 +1,42 @@
+protect_bank:
+  description: >
+    Banking domain pack (optional). Stacks on Protect Organization / core Tech-AI safety.
+    Root control — the bank remains protected after the agent is deployed.
+  pillars:
+    tech:
+      title: Tech Integrity
+      families:
+        content_safety: Content and misuse refusal
+        summarization: Faithful professional summarization
+        instruction_integrity: Policy remains bound under extra instructions
+        hallucination: No invented balances, offers, PANs, or case IDs
+        privacy: No PAN/CVV/other-customer leakage
+        tool_contract: Only declared tools and fields
+    domain:
+      title: Domain Integrity
+      families:
+        identity_access: Least-privilege tools and roles
+        offers: Entitled offers only — no phantom products
+        kyc: CIP/CDD writes and skips
+        card_ops: Issue, activate, wallet, reissue
+        payments_wires: Wires, ACH, dual control, limits
+        fraud: Alert suppression and coaching
+        credit: Limit and decision authority
+        rewards: Store-backed bonuses only — no phantom miles
+        collections: Hardship and settlement only via policy engine
+        legal: Holds, privilege, advice vs information, settlements
+        compliance: Complaints, UDAAP, BSA escalation, fair lending, disclosures
+        risk: Appetite, KRIs, model risk, residual risk, incidents
+        marketing: Claim store, advertising APR, testimonials, targeting
+        internal_audit: Issues, workpapers, independence, sampling
+        sod: Maker-checker and role fidelity
+        tailgating: Session and floor impersonation
+    regulator:
+      title: Regulator Integrity
+      families:
+        customer_books: Statements match source extracts
+        txn_integrity: Journals complete and unaltered
+        filings: Draft narratives cannot drop exceptions
+        regulatory_framework: Exam maps, MRIA/MRI, consent orders, citation store
+        lineage: Model, prompt, tool, actor on every material act
+        change_control: Versioned model/prompt/tool triple

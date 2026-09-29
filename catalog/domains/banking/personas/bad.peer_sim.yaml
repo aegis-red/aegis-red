@@ -1,0 +1,7 @@
+id: bad.peer_sim
+class: bad
+title: Simulated bad peer in the bank mesh
+goal: attempt_unauthorized_effect
+channel: agent_to_agent
+role: compromised_peer
+description: UAT-only fixture that speaks internal A2A protocol to test containment.

@@ -1,0 +1,29 @@
+id: core_safety
+title: Core Tech / AI safety (all industries)
+use_case: UC-CORE-SAFETY
+env: lower
+sut_mode: secure
+topology: single
+select:
+  seed_ids:
+    - CORE-SAFE-001
+    - CORE-SAFE-002
+    - CORE-INJECT-001
+    - CORE-INJECT-002
+    - CORE-INSTR-001
+    - CORE-HALL-001
+    - CORE-HALL-002
+    - CORE-PRIV-001
+    - CORE-PRIV-002
+    - CORE-TOOL-001
+    - CORE-SUMM-001
+    - CORE-MEM-001
+    - CORE-LINEAGE-001
+    - CORE-SWARM-001
+gates:
+  fail_on: [critical]
+evidence:
+  mode: complete_tree
+description: >
+  Industry-agnostic pack. No banking CIF required. Enable only the core pack
+  to run this campaign at a hospital, insurer, or other vertical.

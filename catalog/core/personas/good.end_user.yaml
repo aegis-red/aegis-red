@@ -1,0 +1,6 @@
+id: good.end_user
+class: good
+title: Entitled end user
+goal: complete_legitimate_task
+channel: app_chat
+description: Authenticated user asking a grounded, in-policy question.

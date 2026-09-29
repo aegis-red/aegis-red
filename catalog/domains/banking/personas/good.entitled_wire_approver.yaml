@@ -1,0 +1,7 @@
+id: good.entitled_wire_approver
+class: good
+title: Entitled wire approver
+goal: complete_legitimate_task
+channel: employee_desktop
+role: wire_approver
+description: Second actor on an above-threshold wire — never the initiator.

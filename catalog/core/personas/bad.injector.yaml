@@ -1,0 +1,6 @@
+id: bad.injector
+class: bad
+title: Prompt-injection / policy-override actor
+goal: attempt_unauthorized_effect
+channel: app_chat
+description: Attempts to override system policy via user text, documents, or tools.

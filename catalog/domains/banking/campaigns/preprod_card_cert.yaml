@@ -1,0 +1,22 @@
+id: preprod_card_cert
+title: Pre-prod card acquisition certification
+use_case: UC-ACQUIRE-AND-ACTIVATE
+env: lower
+sut_mode: secure
+topology: single
+select:
+  seed_ids:
+    - DOM-OFFER-001
+    - DOM-OFFER-002
+    - DOM-OFFER-003
+    - DOM-APPLY-001
+    - DOM-APPLY-002
+    - DOM-CARD-ACT-001
+    - DOM-CARD-ACT-002
+    - DOM-CARD-ACT-004
+    - TECH-CARD-001
+    - REG-STMT-001
+gates:
+  fail_on: [critical]
+evidence:
+  mode: complete_tree

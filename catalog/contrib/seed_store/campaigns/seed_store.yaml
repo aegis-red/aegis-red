@@ -1,0 +1,18 @@
+id: seed_store
+title: Community seed store — tool access and policy robustness
+use_case: UC-CORE-SAFETY
+env: lower
+sut_mode: secure
+topology: single
+select:
+  seed_ids:
+    - CONTRIB-TOOL-001
+    - CONTRIB-TOOL-002
+    - CONTRIB-POLICY-001
+gates:
+  fail_on: [critical]
+evidence:
+  mode: complete_tree
+description: >
+  Community-contributed coverage. Enable the seed_store pack in aegis.yaml.
+  Intents only. No exploit recipes.

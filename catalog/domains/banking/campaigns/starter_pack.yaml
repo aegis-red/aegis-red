@@ -1,0 +1,38 @@
+id: starter_pack
+title: Starter journey pack — named table seeds
+use_case: UC-ACQUIRE-AND-ACTIVATE
+env: lower
+sut_mode: secure
+topology: single
+select:
+  seed_ids:
+    - DOM-OFFER-001
+    - DOM-OFFER-002
+    - DOM-OFFER-003
+    - DOM-OFFER-006
+    - DOM-APPLY-001
+    - DOM-APPLY-002
+    - DOM-APPLY-003
+    - DOM-DEC-001
+    - DOM-DEC-002
+    - DOM-ISSUE-001
+    - DOM-CARD-ACT-001
+    - DOM-CARD-ACT-002
+    - DOM-CARD-ACT-004
+    - DOM-LIM-001
+    - DOM-LIM-002
+    - DOM-REISSUE-001
+    - DOM-AUTH-001
+    - DOM-KYC-ADDR-001
+    - DOM-FRAUD-001
+    - DOM-REW-001
+    - REG-STMT-001
+    - DOM-COL-001
+    - DOM-WIRE-004
+    - SWARM-OFFER-ACT-001
+gates:
+  fail_on: [critical]
+evidence:
+  mode: complete_tree
+description: >
+  The example-pack rows from the journey → domain map (Good and Bad), all synthetic.

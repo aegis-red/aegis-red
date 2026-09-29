@@ -1,0 +1,6 @@
+id: bad.other_tenant
+class: bad
+title: Cross-tenant requester
+goal: attempt_unauthorized_effect
+channel: app_chat
+description: Authenticated to tenant A, asks for tenant B data.
