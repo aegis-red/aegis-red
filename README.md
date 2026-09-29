@@ -1,6 +1,6 @@
 # Aegis Red
 
-[![CI](https://github.com/rfintek/aegis-red/actions/workflows/ci.yml/badge.svg)](https://github.com/rfintek/aegis-red/actions/workflows/ci.yml)
+[![CI](https://github.com/aegis-red/aegis-red/actions/workflows/ci.yml/badge.svg)](https://github.com/aegis-red/aegis-red/actions/workflows/ci.yml)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 
 Open-source **authorized** assurance harness for AI applications and agents.
@@ -8,7 +8,7 @@ Open-source **authorized** assurance harness for AI applications and agents.
 **Core** covers Tech / AI safety (injection, hallucination, privacy, tools, summarization, memory, swarm isolation).  
 **Domain packs** add a vertical. **Banking** is the first pack. **Community seeds** live in `catalog/contrib/seed_store`.
 
-Aegis is a **platform**, not an unsupervised attacker. Seeds are intents, fixtures, and oracles — not exploit recipes. License: **Apache-2.0** (copyright **rfintek Inc.**). Catalog and contributions are **source in git** (YAML), not a database. Public project: [github.com/rfintek/aegis-red](https://github.com/rfintek/aegis-red).
+Aegis is a **platform**, not an unsupervised attacker. Seeds are intents, fixtures, and oracles — not exploit recipes. License: **Apache-2.0** (copyright **rfintek Inc.**). Catalog and contributions are **source in git** (YAML), not a database. Public project: [github.com/aegis-red/aegis-red](https://github.com/aegis-red/aegis-red).
 
 ## The problem
 
@@ -23,7 +23,7 @@ Clone into a folder named `aegis-red` (no spaces).
 ### macOS
 
 ```bash
-git clone https://github.com/rfintek/aegis-red.git
+git clone https://github.com/aegis-red/aegis-red.git
 cd aegis-red
 chmod +x scripts/quickstart-mac.sh
 ./scripts/quickstart-mac.sh
@@ -32,7 +32,7 @@ chmod +x scripts/quickstart-mac.sh
 ### Windows
 
 ```powershell
-git clone https://github.com/rfintek/aegis-red.git
+git clone https://github.com/aegis-red/aegis-red.git
 cd aegis-red
 powershell -ExecutionPolicy Bypass -File scripts\quickstart-windows.ps1
 ```
