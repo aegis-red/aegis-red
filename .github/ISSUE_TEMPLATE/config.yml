@@ -1,5 +1,5 @@
 blank_issues_enabled: true
 contact_links:
   - name: Security advisory (private)
-    url: https://github.com/rfintek/aegis-red/security/advisories/new
+    url: https://github.com/aegis-red/aegis-red/security/advisories/new
     about: Do not file jailbreak payloads or exploits in public issues. See SECURITY.md.
